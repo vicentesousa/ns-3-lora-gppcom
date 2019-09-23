@@ -14,7 +14,7 @@
 - Baixar, abrir, editar e criar Notebooks que executem blocos de código de Python (Python 3)
 - Fazer um primeiro uso da linguagem Python 3 dentro dos Notebooks
 
-### [Github: criação de seu próprio repositório](http://nbviewer.jupyter.org/github/vicentesousa/ns-3-lora-gppcom/blob/master/ambiente/h00_GIT_18.04.ipynb)
+### [Github: báscio sobre repositórios](http://nbviewer.jupyter.org/github/vicentesousa/ns-3-lora-gppcom/blob/master/ambiente/h00_GIT.ipynb)
 **Objetivos**
 - Cadastramento no GitHub
 - Criar repositorios no GitHub
