@@ -1,7 +1,7 @@
 # Repositório do GppCom sobre estudos de LoRaWAN usando o ns-3 do 
 
 ## Preliminares: Preparação do ambiente de prática e desenvolvimento (escolher entre UBUNTU 14.04.06 ou 18.04.2 LTS) 
-### [Criação de máquina virtual Ubuntu (UBUNTU 14.04.06)](http://nbviewer.jupyter.org/github/vicentesousa/ns-3-lora-gppcom/blob/master/ambiente/h00_VM.ipynb)
+### [Criação de máquina virtual Ubuntu (UBUNTU 14.04.06)](http://nbviewer.jupyter.org/github/vicentesousa/ns-3-lora-gppcom/blob/master/ambiente/h00_VM_simples.ipynb)
 ### [Criação de máquina virtual Ubuntu (UBUNTU 18.04.2)](http://nbviewer.jupyter.org/github/vicentesousa/ns-3-lora-gppcom/blob/master/ambiente/h00_VM_18.04.ipynb)
 **Objetivos:**
 - Instalar VMWare no Windows
