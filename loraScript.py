@@ -47,7 +47,7 @@ class Simulation:
               f.write('#!/bin/bash\n')
               f.write("cd '"+self.ns3_path+"'"+"\n")
               outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
-              f.write('rm -rf '+outputDir+' 2>/dev/null\n')
+              #f.write('rm -rf '+outputDir+' 2>/dev/null\n')
               f.write('mkdir -p '+outputDir+'\n')
             for iJob in range(0, self.nJobs):
                 jobRunSeed = random.randint(1, 23*10**14)
