@@ -28,7 +28,12 @@ sudo wget https://www.nsnam.org/release/ns-allinone-3.29.tar.bz2 --no-check-cert
 tar xvjf ns-allinone-3.29.tar.bz2
 
 # novo repositório com o código do LoRa
-git clone https://github.com/signetlabdei/lorawan ns-allinone-3.29/ns-3.29/src/lorawan
+git clone https://github.com/signetlabdei/lorawan 
+rm -rf lorawan/.git
+rm -rf lorawan/.github
+rm -rf lorawan/.gitignore
+rm -rf lorawan/README.md
+mv lorawan ns-allinone-3.29/ns-3.29/src/
 # repositório antigo com o código do LoRa (talvez tenha sido essa versão que Luiz usou)
 # git clone https://github.com/DvdMgr/lorawan ns-allinone-3.29/ns-3.29/src/lorawan
 
