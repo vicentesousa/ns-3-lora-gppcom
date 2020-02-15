@@ -363,26 +363,7 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
       const double *edSensitivity = edPhy->sensitivity;
 
       if(algoritmo==1){
-        if(i<(6*endDevices.GetN())/10 && rxPowerAll[order[i]] > (*edSensitivity+1) ){
-          mac->SetSf(7);
-        }
-        else if(i<(8*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 2)){
-          mac->SetSf(8);
-        }
-        else if(i<(8.5*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 3)){
-          mac->SetSf(9);
-        }
-        else if(i<(9*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 4)){
-          mac->SetSf(10);
-        }
-        else if(i<(9.5*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 5)){
-          mac->SetSf(11);
-        }
-        else{
-          mac->SetSf(12);
-        }
-      
-
+        mac->SetSf(7);
 
       }else if(algoritmo==2){
         if(i<(1*endDevices.GetN())/6){
@@ -408,8 +389,25 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
 
 
       }else if(algoritmo==3){
-        mac->SetSf(7);
-      
+        if(i<(6*endDevices.GetN())/10){
+          mac->SetSf(7);
+        }
+        else if(i<(8*endDevices.GetN())/10){
+          mac->SetSf(8);
+        }
+        else if(i<(8.5*endDevices.GetN())/10){
+          mac->SetSf(9);
+        }
+        else if(i<(9*endDevices.GetN())/10){
+          mac->SetSf(10);
+        }
+        else if(i<(9.5*endDevices.GetN())/10){
+          mac->SetSf(11);
+        }
+        else{
+          mac->SetSf(12);
+
+        }
 
 
 
