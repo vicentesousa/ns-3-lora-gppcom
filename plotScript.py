@@ -27,7 +27,7 @@ import matplotlib
 
 class openSimulation:
     def __init__(self, configurations_file):
-        self.email_to = 'martinsdecastro23@gmail.com'            
+        self.email_to = 'fulano@gmail.com'            
         with open(configurations_file, 'r') as f:
             self.doc = yaml.load(f, Loader=yaml.loader.BaseLoader)
         self.campaign_name = os.path.splitext(configurations_file)[0]
@@ -54,6 +54,20 @@ class openSimulation:
             self.plotCI = False;
         self.filename = str(self.doc['scenario']['filename'])
         
+    def doLabel(self, algID):
+        # Define labels for plots legends
+        if algID == '1':
+            return "SF7 (I)"
+        elif algID == '2':
+            return "Equal Split (II)"
+        elif algID == '3':
+            return "Unequal Split (III)"
+        elif algID == '4':
+            return "Product-based (IV)"
+        elif algID == '5':
+            return "Proposed ADR (V)"
+        
+        
     def plotCampaign(self,curCampaign, metric):
         # some general configurations
         outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign        
@@ -72,17 +86,19 @@ class openSimulation:
         plt.figure()     
         for iAlg in self.algoritmo:
             m_plr, m_plrCI, m_tput, m_tputCI, m_pkt, m_pktCI = [], [], [], [], [], []
-            for varParam in self.doc['scenario'][curCampaign]:                
+            for varParam in sorted(self.doc['scenario'][curCampaign],key=int):
+                                
                 if str(curCampaign) == 'radius':
                     resalgIndexs = (resalg == int(iAlg)) & (resradius == int(varParam))
                     xlabel='Distância [m]'
-                    resxData = self.radius; 
+                    resxData = sorted(self.radius,key=int)
                 elif str(curCampaign) == 'nDevices':
                     resalgIndexs = (resalg == int(iAlg)) & (resnDevices == int(varParam))                    
                     xlabel='Quantidade de Dispositivos'
-                    resxData = self.nDevices;
+                    resxData = sorted(self.nDevices,key=int)
                 # Plr Evaluation
-                label = "ADR_"+iAlg
+                label = self.doLabel(iAlg)
+                #print(label)
                 color=next(colors)
                 marker=next(markersA)
                 if metric=='PLR':                
@@ -157,6 +173,7 @@ class openSimulation:
                 plt.show()
             else:
                 plt.close()
+                
         elif metric=='Tput':
             # TODO
             # Show and save PLR plot
@@ -213,7 +230,7 @@ campaign = doc['scenario']['campaign']
 print(campaign)
                  
 simu = openSimulation(configurations_file)
-for iMet in ['PLR', 'Tput', 'Pkt','Stime']:
+for iMet in ['PLR', 'Tput', 'Pkt']:
     for simC in campaign:
         if str(simC) == 'nDevices' or str(simC) == 'radius':
             simu.plotCampaign(simC,iMet);

@@ -15,7 +15,7 @@ import yaml
 
 class Simulation:
     def __init__(self, configurations_file):
-        self.email_to = 'martinsdecastro23@gmail.com'            
+        #self.email_to = 'sicrano@gmail.com'            
         with open(configurations_file, 'r') as f:
             self.doc = yaml.load(f, Loader=yaml.loader.BaseLoader)
         self.campaign_name = os.path.splitext(configurations_file)[0]
@@ -35,19 +35,22 @@ class Simulation:
         self.ns3_script = str(self.doc['scenario']['ns3_script'])
         self.nJobs = int(self.doc['scenario']['jobs'])
         self.filename = str(self.doc['scenario']['filename'])
+        self.configurations_file = configurations_file
        
     def runCampaign(self,curCampaign):
         # Configure simulation file in accordance with campaign parameter
         sh_name = self.campaign_name + '_' + self.simLocation + '_' + curCampaign
         print(curCampaign+" campaign written in file: " 'run_%s.sh' % sh_name)
-        with open('run_all_%s.sh' % sh_name, 'w') as f:                    
+        with open('run_%s.sh' % sh_name, 'w') as f:                    
             if self.simLocation == 'cluster':
               print('To be implemented')
             else:
-              f.write('#!/bin/bash\n')
-              f.write("cd '"+self.ns3_path+"'"+"\n")
               outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
-              #f.write('rm -rf '+outputDir+' 2>/dev/null\n')
+              f.write('#!/bin/bash\n')
+              f.write('cp -f run_'+sh_name+'.sh'+' '+outputDir+'\n')
+              f.write('cp -f '+self.configurations_file+ ' ' +outputDir+'\n')
+              f.write("cd '"+self.ns3_path+"'"+"\n")
+              f.write('rm -rf '+outputDir+' 2>/dev/null\n')
               f.write('mkdir -p '+outputDir+'\n')
             for iJob in range(0, self.nJobs):
                 jobRunSeed = random.randint(1, 23*10**14)
