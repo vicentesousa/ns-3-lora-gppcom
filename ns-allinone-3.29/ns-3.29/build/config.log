@@ -1,19 +1,18 @@
-# project ns (3.29) configured on Wed Feb 19 09:52:47 2020 by
-# waf 2.0.9 (abi 20, python 30701f0 on linux)
-# using ./waf --build-profile=debug --disable-examples --disable-tests --disable-python configure
+# project ns (3.29) configured on Fri Mar 13 10:30:50 2020 by
+# waf 2.0.9 (abi 20, python 30405f0 on linux)
+# using ./waf --build-profile=optimized --disable-examples --disable-tests --disable-python configure
 #
 ----------------------------------------
 Setting top to
-/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29
+/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29
 ----------------------------------------
 Setting out to
-/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build
+/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
-find program=['gcc', 'cc'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='CC' -> ['/usr/bin/gcc']
+find program=['gcc', 'cc'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CC' -> ['/usr/bin/gcc']
 ['/usr/bin/gcc', '-dM', '-E', '-']
-out: #define __SSP_STRONG__ 3
-#define __DBL_MIN_EXP__ (-1021)
+out: #define __DBL_MIN_EXP__ (-1021)
 #define __UINT_LEAST16_MAX__ 65535
 #define __ATOMIC_ACQUIRE 2
 #define __FLT_MIN__ 1.17549435082228750797e-38F
@@ -75,7 +74,7 @@ out: #define __SSP_STRONG__ 3
 #define __INT32_MAX__ 2147483647
 #define __SIZEOF_LONG__ 8
 #define __STDC_IEC_559__ 1
-#define __STDC_ISO_10646__ 201505L
+#define __STDC_ISO_10646__ 201103L
 #define __UINT16_C(c) c
 #define __DECIMAL_DIG__ 21
 #define __gnu_linux__ 1
@@ -204,6 +203,7 @@ out: #define __SSP_STRONG__ 3
 #define __SSE__ 1
 #define __LDBL_MIN_EXP__ (-16381)
 #define __INT_LEAST8_MAX__ 127
+#define __SSP__ 1
 #define __SIZEOF_INT128__ 16
 #define __LDBL_MAX_10_EXP__ 4932
 #define __ATOMIC_RELAXED 0
@@ -256,7 +256,7 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='AR' -> ['/usr/bin/ar']
 ==>
 
 int main(int argc, char **argv) {
@@ -265,22 +265,21 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5e1e11721562b1e76c794ac0c593822f/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_d3c305e6b7f4faae797979f60332ceaa/test.c[0m
 
-['/usr/bin/gcc', '-fPIC', '../test.c', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_5e1e11721562b1e76c794ac0c593822f/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_5e1e11721562b1e76c794ac0c593822f/testbuild/libtestprog.so[0m
+['/usr/bin/gcc', '-fPIC', '../test.c', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_d3c305e6b7f4faae797979f60332ceaa/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_d3c305e6b7f4faae797979f60332ceaa/testbuild/libtestprog.so[0m
 
-['/usr/bin/gcc', '-shared', 'test.c.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_5e1e11721562b1e76c794ac0c593822f/testbuild/libtestprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/gcc', '-shared', 'test.c.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_d3c305e6b7f4faae797979f60332ceaa/testbuild/libtestprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 /usr/bin/gcc
 ----------------------------------------
 Checking for cc version
 4.9.4
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
-find program=['g++', 'c++'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='CXX' -> ['/usr/bin/g++']
+find program=['g++', 'c++'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CXX' -> ['/usr/bin/g++']
 ['/usr/bin/g++', '-dM', '-E', '-']
-out: #define __SSP_STRONG__ 3
-#define __DBL_MIN_EXP__ (-1021)
+out: #define __DBL_MIN_EXP__ (-1021)
 #define __UINT_LEAST16_MAX__ 65535
 #define __ATOMIC_ACQUIRE 2
 #define __FLT_MIN__ 1.17549435082228750797e-38F
@@ -342,7 +341,7 @@ out: #define __SSP_STRONG__ 3
 #define __INT32_MAX__ 2147483647
 #define __SIZEOF_LONG__ 8
 #define __STDC_IEC_559__ 1
-#define __STDC_ISO_10646__ 201505L
+#define __STDC_ISO_10646__ 201103L
 #define __UINT16_C(c) c
 #define __DECIMAL_DIG__ 21
 #define __gnu_linux__ 1
@@ -471,6 +470,7 @@ out: #define __SSP_STRONG__ 3
 #define __SSE__ 1
 #define __LDBL_MIN_EXP__ (-16381)
 #define __INT_LEAST8_MAX__ 127
+#define __SSP__ 1
 #define __SIZEOF_INT128__ 16
 #define __LDBL_MAX_10_EXP__ 4932
 #define __ATOMIC_RELAXED 0
@@ -523,7 +523,7 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='AR' -> ['/usr/bin/ar']
 ==>
 
 int main(int argc, char **argv) {
@@ -532,69 +532,167 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a80d6f9b5aeb09f29ba5f669f1471819/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_73dce0ccdde7ca14248c232ca5e786f1/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-fPIC', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_a80d6f9b5aeb09f29ba5f669f1471819/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a80d6f9b5aeb09f29ba5f669f1471819/testbuild/libtestprog.so[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-fPIC', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_73dce0ccdde7ca14248c232ca5e786f1/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_73dce0ccdde7ca14248c232ca5e786f1/testbuild/libtestprog.so[0m
 
-['/usr/bin/g++', '-shared', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_a80d6f9b5aeb09f29ba5f669f1471819/testbuild/libtestprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-shared', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_73dce0ccdde7ca14248c232ca5e786f1/testbuild/libtestprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 /usr/bin/g++
+---------------------------------------------------
+Checking for compilation flag -march=native support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_3db6f865f166952392152a2d827ef4f5/test.cpp[0m
+
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_3db6f865f166952392152a2d827ef4f5/testbuild/test.cpp.1.o']
+ok
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_438c2367c9709a08c41d0f437667b66f/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_3db6f865f166952392152a2d827ef4f5/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_438c2367c9709a08c41d0f437667b66f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_3db6f865f166952392152a2d827ef4f5/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -std=c++11 support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_438c2367c9709a08c41d0f437667b66f/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_3db6f865f166952392152a2d827ef4f5/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_438c2367c9709a08c41d0f437667b66f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_3db6f865f166952392152a2d827ef4f5/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking boost includes
-1_58
+1_54
 ------------------------------------------------------
 Checking boost libs
 Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
+    /usr/lib/x86_64-linux-gnu/libboost_atomic.a
+    /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+    /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_chrono.a
+    /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+    /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_context.a
+    /usr/lib/x86_64-linux-gnu/libboost_context.so
+    /usr/lib/x86_64-linux-gnu/libboost_context.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_coroutine.a
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.a
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so
     /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.54.0
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.58.0
+    /usr/lib/x86_64-linux-gnu/libboost_exception.a
     /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.54.0
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_log.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_random.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.58.0
+    /usr/lib/x86_64-linux-gnu/libboost_graph.a
+    /usr/lib/x86_64-linux-gnu/libboost_graph.so
+    /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.a
+    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so
+    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.a
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_locale.a
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_log.a
+    /usr/lib/x86_64-linux-gnu/libboost_log.so
+    /usr/lib/x86_64-linux-gnu/libboost_log.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_log_setup.a
+    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so
+    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_mpi.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py27.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py27.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py27.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py34.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py34.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py34.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python.so
+    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.a
+    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so
+    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_program_options.a
+    /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+    /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_python-py27.a
+    /usr/lib/x86_64-linux-gnu/libboost_python-py27.so
+    /usr/lib/x86_64-linux-gnu/libboost_python-py27.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_python-py34.a
+    /usr/lib/x86_64-linux-gnu/libboost_python-py34.so
+    /usr/lib/x86_64-linux-gnu/libboost_python-py34.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_python.a
+    /usr/lib/x86_64-linux-gnu/libboost_python.so
+    /usr/lib/x86_64-linux-gnu/libboost_random.a
+    /usr/lib/x86_64-linux-gnu/libboost_random.so
+    /usr/lib/x86_64-linux-gnu/libboost_random.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_regex.a
+    /usr/lib/x86_64-linux-gnu/libboost_regex.so
+    /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_serialization.a
+    /usr/lib/x86_64-linux-gnu/libboost_serialization.so
+    /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.54.0
     /usr/lib/x86_64-linux-gnu/libboost_signals.a
     /usr/lib/x86_64-linux-gnu/libboost_signals.so
     /usr/lib/x86_64-linux-gnu/libboost_signals.so.1.54.0
-    /usr/lib/x86_64-linux-gnu/libboost_signals.so.1.58.0
     /usr/lib/x86_64-linux-gnu/libboost_system.a
     /usr/lib/x86_64-linux-gnu/libboost_system.so
     /usr/lib/x86_64-linux-gnu/libboost_system.so.1.54.0
-    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.58.0
-Trying pattern boost_system(-gcc[0-9]{0,3})-1_58.so$
-Trying pattern boost_system-1_58.so$
+    /usr/lib/x86_64-linux-gnu/libboost_test_exec_monitor.a
+    /usr/lib/x86_64-linux-gnu/libboost_thread.a
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_timer.a
+    /usr/lib/x86_64-linux-gnu/libboost_timer.so
+    /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a
+    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
+    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_wave.a
+    /usr/lib/x86_64-linux-gnu/libboost_wave.so
+    /usr/lib/x86_64-linux-gnu/libboost_wave.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_wserialization.a
+    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so
+    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so.1.54.0
+Trying pattern boost_system(-gcc[0-9]{0,3})-1_54.so$
+Trying pattern boost_system-1_54.so$
 Trying pattern boost_system(-gcc[0-9]{0,3}).so$
 Trying pattern boost_system.so$
 Found boost lib /usr/lib/x86_64-linux-gnu/libboost_system.so
-Trying pattern boost_signals(-gcc[0-9]{0,3})-1_58.so$
-Trying pattern boost_signals-1_58.so$
+Trying pattern boost_signals(-gcc[0-9]{0,3})-1_54.so$
+Trying pattern boost_signals-1_54.so$
 Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
 Trying pattern boost_signals.so$
 Found boost lib /usr/lib/x86_64-linux-gnu/libboost_signals.so
-Trying pattern boost_filesystem(-gcc[0-9]{0,3})-1_58.so$
-Trying pattern boost_filesystem-1_58.so$
+Trying pattern boost_filesystem(-gcc[0-9]{0,3})-1_54.so$
+Trying pattern boost_filesystem-1_54.so$
 Trying pattern boost_filesystem(-gcc[0-9]{0,3}).so$
 Trying pattern boost_filesystem.so$
 Found boost lib /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -607,12 +705,12 @@ Checking for boost linkage
 int main() { boost::system::error_code c; }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c7a35942865ee0aec469d3a834b6b7fc/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_bc13dd993e03c5b507bfa3dc4a7a7bd8/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-I/usr/include', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_c7a35942865ee0aec469d3a834b6b7fc/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c7a35942865ee0aec469d3a834b6b7fc/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-I/usr/include', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_bc13dd993e03c5b507bfa3dc4a7a7bd8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_bc13dd993e03c5b507bfa3dc4a7a7bd8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_c7a35942865ee0aec469d3a834b6b7fc/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_bc13dd993e03c5b507bfa3dc4a7a7bd8/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
 ok
 ------------------------------------------------------
 Checking for click location
@@ -620,7 +718,7 @@ not found
 ------------------------------------------------------
 Checking for program 'pkg-config'
 /usr/bin/pkg-config
-find program=['pkg-config'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+find program=['pkg-config'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
 ------------------------------------------------------
 Checking for 'gtk+-3.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-3.0']
@@ -630,11 +728,11 @@ to the PKG_CONFIG_PATH environment variable
 No package 'gtk+-3.0' found
 
 not found
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/config-store: The configuration failed
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/config-store: The configuration failed
 ------------------------------------------------------
 Checking for 'libxml-2.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0']
-out: -I/usr/include/libxml2 -lxml2
+out: -I/usr/include/libxml2  -lxml2  
 
 yes
 ------------------------------------------------------
@@ -651,9 +749,9 @@ checking for uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_91bc15ce83b87453835dd9531bf23dbc/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2cec83741b4897beeb9aa2e2d2b00817/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_91bc15ce83b87453835dd9531bf23dbc/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_2cec83741b4897beeb9aa2e2d2b00817/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope
   if ((uint128_t *) 0) return 0;
@@ -668,16 +766,16 @@ err: ../test.cpp: In function ‘int main(int, char**)’:
   if (sizeof (uint128_t)) return 0;
               ^
 
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
 ------------------------------------------------------
 checking for __uint128_t
 ==>
@@ -692,12 +790,12 @@ checking for __uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_b8997b2abd3d65c3a9a47ade185d1387/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6c3d5bc1b27345a463552679adba25a3/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_b8997b2abd3d65c3a9a47ade185d1387/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b8997b2abd3d65c3a9a47ade185d1387/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_6c3d5bc1b27345a463552679adba25a3/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6c3d5bc1b27345a463552679adba25a3/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_b8997b2abd3d65c3a9a47ade185d1387/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_6c3d5bc1b27345a463552679adba25a3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking high precision implementation
@@ -713,12 +811,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header inttypes.h
@@ -731,12 +829,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0c0049659ad6063a4b25e21193596ea3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0c0049659ad6063a4b25e21193596ea3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0c0049659ad6063a4b25e21193596ea3/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0c0049659ad6063a4b25e21193596ea3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -749,24 +847,24 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_026e319c27700060c176d7f801f11270/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_81d7b15f46c372fecb37c84ae3e24195/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_026e319c27700060c176d7f801f11270/testbuild/test.cpp.1.o']
-err: ../test.cpp:1:26: fatal error: sys/inttypes.h: Arquivo ou diretório não encontrado
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_81d7b15f46c372fecb37c84ae3e24195/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
  #include <sys/inttypes.h>
                           ^
 compilation terminated.
 
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
 ------------------------------------------------------
 Checking for header sys/types.h
 ==>
@@ -778,12 +876,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6b21f50e36331f548442eb7682b0c874/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_44ebf71ea138db2b4436fb768139c6bc/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_6b21f50e36331f548442eb7682b0c874/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_6b21f50e36331f548442eb7682b0c874/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_44ebf71ea138db2b4436fb768139c6bc/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_44ebf71ea138db2b4436fb768139c6bc/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_6b21f50e36331f548442eb7682b0c874/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_44ebf71ea138db2b4436fb768139c6bc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header sys/stat.h
@@ -796,12 +894,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e540ff0f853e788b28d9cd238dbb461b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_337eb273030cc9af69fdef22bddc9f5e/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_e540ff0f853e788b28d9cd238dbb461b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e540ff0f853e788b28d9cd238dbb461b/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_337eb273030cc9af69fdef22bddc9f5e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_337eb273030cc9af69fdef22bddc9f5e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_e540ff0f853e788b28d9cd238dbb461b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_337eb273030cc9af69fdef22bddc9f5e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header dirent.h
@@ -814,12 +912,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a58e61f1995fc3ed2019c86341608a20/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d1a60aab22a78fea8b2c158d5ad90372/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_a58e61f1995fc3ed2019c86341608a20/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a58e61f1995fc3ed2019c86341608a20/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_d1a60aab22a78fea8b2c158d5ad90372/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d1a60aab22a78fea8b2c158d5ad90372/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_a58e61f1995fc3ed2019c86341608a20/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_d1a60aab22a78fea8b2c158d5ad90372/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header stdlib.h
@@ -832,12 +930,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_67465e659111ace344b4289afa6be11f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_21b50ac4b589f215acd5c267c7c5347e/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_67465e659111ace344b4289afa6be11f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_67465e659111ace344b4289afa6be11f/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_21b50ac4b589f215acd5c267c7c5347e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_21b50ac4b589f215acd5c267c7c5347e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_67465e659111ace344b4289afa6be11f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_21b50ac4b589f215acd5c267c7c5347e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header signal.h
@@ -850,12 +948,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_1afca8e405348c818eb003a75895ac1d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_07836cbc6c7577d64cb1c907cbb441b7/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_1afca8e405348c818eb003a75895ac1d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_1afca8e405348c818eb003a75895ac1d/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_07836cbc6c7577d64cb1c907cbb441b7/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_07836cbc6c7577d64cb1c907cbb441b7/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_1afca8e405348c818eb003a75895ac1d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_07836cbc6c7577d64cb1c907cbb441b7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header pthread.h
@@ -870,12 +968,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3f4b32af6f37e8844ec1e1a479700604/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2203dd90835f8cb0c4425b7022cb00f9/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_3f4b32af6f37e8844ec1e1a479700604/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3f4b32af6f37e8844ec1e1a479700604/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_2203dd90835f8cb0c4425b7022cb00f9/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2203dd90835f8cb0c4425b7022cb00f9/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_3f4b32af6f37e8844ec1e1a479700604/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_2203dd90835f8cb0c4425b7022cb00f9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header stdint.h
@@ -888,12 +986,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_aeaf3a05702f81fa31a80eb40bd1331f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_af1c23da9bf3906cd8db9f2305f90c9c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header inttypes.h
@@ -906,12 +1004,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0c0049659ad6063a4b25e21193596ea3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0c0049659ad6063a4b25e21193596ea3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0c0049659ad6063a4b25e21193596ea3/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0c0049659ad6063a4b25e21193596ea3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_8a54e1482b010edc3d427ff83f5d3a64/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -924,24 +1022,24 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_026e319c27700060c176d7f801f11270/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_81d7b15f46c372fecb37c84ae3e24195/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_026e319c27700060c176d7f801f11270/testbuild/test.cpp.1.o']
-err: ../test.cpp:1:26: fatal error: sys/inttypes.h: Arquivo ou diretório não encontrado
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_81d7b15f46c372fecb37c84ae3e24195/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
  #include <sys/inttypes.h>
                           ^
 compilation terminated.
 
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
 ------------------------------------------------------
 Checking for library rt
 ==>
@@ -952,12 +1050,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5384732589b80b9348f913e1f6024669/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6b619199605111da61625ef73af6edfe/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_5384732589b80b9348f913e1f6024669/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_5384732589b80b9348f913e1f6024669/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_6b619199605111da61625ef73af6edfe/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6b619199605111da61625ef73af6edfe/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_5384732589b80b9348f913e1f6024669/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_6b619199605111da61625ef73af6edfe/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -970,12 +1068,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b8425a15eae418ebc5ed52c919b97ffb/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_0d261dc3d128eb1abfbcadd05fef95b2/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_b8425a15eae418ebc5ed52c919b97ffb/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b8425a15eae418ebc5ed52c919b97ffb/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0d261dc3d128eb1abfbcadd05fef95b2/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0d261dc3d128eb1abfbcadd05fef95b2/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_b8425a15eae418ebc5ed52c919b97ffb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0d261dc3d128eb1abfbcadd05fef95b2/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header net/if.h
@@ -988,12 +1086,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0a07f76a3214a7ffa90cab649fe33c6a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4edaf2114eb36cd2954f5b8cb5f42ca6/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0a07f76a3214a7ffa90cab649fe33c6a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0a07f76a3214a7ffa90cab649fe33c6a/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_4edaf2114eb36cd2954f5b8cb5f42ca6/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_4edaf2114eb36cd2954f5b8cb5f42ca6/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_0a07f76a3214a7ffa90cab649fe33c6a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_4edaf2114eb36cd2954f5b8cb5f42ca6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1006,12 +1104,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f558c691d046564339945b8cbfe34f99/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_e2938a94f25cfa7eaac030c0f99a69fb/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_f558c691d046564339945b8cbfe34f99/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f558c691d046564339945b8cbfe34f99/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_e2938a94f25cfa7eaac030c0f99a69fb/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e2938a94f25cfa7eaac030c0f99a69fb/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_f558c691d046564339945b8cbfe34f99/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_e2938a94f25cfa7eaac030c0f99a69fb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1024,12 +1122,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4ca1eddb609312fa29679afbd31b860a/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_4ca1eddb609312fa29679afbd31b860a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_4ca1eddb609312fa29679afbd31b860a/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_4ca1eddb609312fa29679afbd31b860a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1042,12 +1140,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a2e37d2e10c614a4f96588822e35153e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_7eacdcd1b07fa7eabff2820a993655bf/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_a2e37d2e10c614a4f96588822e35153e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a2e37d2e10c614a4f96588822e35153e/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_7eacdcd1b07fa7eabff2820a993655bf/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7eacdcd1b07fa7eabff2820a993655bf/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_a2e37d2e10c614a4f96588822e35153e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_7eacdcd1b07fa7eabff2820a993655bf/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for NSC location
@@ -1058,7 +1156,7 @@ not found
 ------------------------------------------------------
 Checking for 'sqlite3'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'sqlite3']
-out: -lsqlite3
+out:  -lsqlite3  
 
 yes
 ------------------------------------------------------
@@ -1072,61 +1170,51 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4ca1eddb609312fa29679afbd31b860a/test.cpp[0m
 
-['/usr/bin/g++', '-Wall', '-g', '-O0', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/testbuild/testprog[0m
+['/usr/bin/g++', '-Wall', '-g', '-O0', '-march=native', '-fstrict-overflow', '-Wstrict-overflow=2', '-std=c++11', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_4ca1eddb609312fa29679afbd31b860a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_4ca1eddb609312fa29679afbd31b860a/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_f9dadb25aebd38a33e1b082ff67801b3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_4ca1eddb609312fa29679afbd31b860a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------
 Checking for program 'sudo'
 /usr/bin/sudo
-find program=['sudo'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='SUDO' -> ['/usr/bin/sudo']
+find program=['sudo'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='SUDO' -> ['/usr/bin/sudo']
 ------------------------------------------------------
 Checking for program 'valgrind'
 /usr/bin/valgrind
-find program=['valgrind'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='VALGRIND' -> ['/usr/bin/valgrind']
+find program=['valgrind'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='VALGRIND' -> ['/usr/bin/valgrind']
 ------------------------------------------------------
 Checking for 'gsl'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
-err: Package gsl was not found in the pkg-config search path.
-Perhaps you should add the directory containing `gsl.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'gsl' found
-
-not found
-from /home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29: The configuration failed
-------------------------------------------------------
-python-config
-/usr/bin/libgcrypt-config
-find program=['libgcrypt-config'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='LIBGCRYPT_CONFIG' -> ['/usr/bin/libgcrypt-config']
-------------------------------------------------------
-Checking for libgcrypt
-['/usr/bin/libgcrypt-config', '--cflags', '--libs']
-out: 
--lgcrypt
+out:  -lgsl -lgslcblas -lm  
 
 yes
+------------------------------------------------------
+python-config
+not found
+find program=['libgcrypt-config'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='LIBGCRYPT_CONFIG' -> None
+from /home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29: Could not find the program ['libgcrypt-config']
 -------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_bc0af8473a7540ad919e4f0edddf1c25/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_81f8a93fde8989eb0fffb2b3975b0fb8/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_CRYPTO=1', '../test.c', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_bc0af8473a7540ad919e4f0edddf1c25/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.c', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_81f8a93fde8989eb0fffb2b3975b0fb8/testbuild/test.c.1.o']
 ok
 -------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_bc0af8473a7540ad919e4f0edddf1c25/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_81f8a93fde8989eb0fffb2b3975b0fb8/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_CRYPTO=1', '../test.c', '-c', '-o/home/simulacao/vicente/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_bc0af8473a7540ad919e4f0edddf1c25/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_OPTIMIZED', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.c', '-c', '-o/home/gppcom/2020_1/ns-3-lora-gppcom/ns-allinone-3.29/ns-3.29/build/.conf_check_81f8a93fde8989eb0fffb2b3975b0fb8/testbuild/test.c.1.o']
 ok
 -------------------------------------------------------
 Checking for program 'doxygen'
 /usr/bin/doxygen
-find program=['doxygen'] paths=['/home/simulacao/anaconda3/bin', '/home/simulacao/bin', '/home/simulacao/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin', '/usr/lib/jvm/java-8-oracle/bin', '/usr/lib/jvm/java-8-oracle/db/bin', '/usr/lib/jvm/java-8-oracle/jre/bin'] var='DOXYGEN' -> ['/usr/bin/doxygen']
+find program=['doxygen'] paths=['/home/gppcom/anaconda3/envs/py34/bin', '/home/gppcom/anaconda3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='DOXYGEN' -> ['/usr/bin/doxygen']

@@ -21,7 +21,8 @@ class Simulation:
         self.campaign_name = os.path.splitext(configurations_file)[0]
         
         # Read commom parameters
-        self.campaign = self.doc['scenario']['campaign']
+        self.campaignX = self.doc['scenario']['campaignX']
+        self.campaignLines = self.doc['scenario']['campaignLines'][0]
         self.simLocation = str(doc['scenario']['simLocation'])
         self.simulationTime = self.doc['scenario']['simulationTime']
         self.nDevices = self.doc['scenario']['nDevices'][0]
@@ -29,11 +30,12 @@ class Simulation:
         self.appPeriodSeconds = self.doc['scenario']['appPeriodSeconds']
         self.bPrint = (self.doc['scenario']['bPrint'])
         self.fixedSeed = (self.doc['scenario']['fixedSeed'])
-        self.algoritmo = self.doc['scenario']['Algoritmo']
+        self.algoritmo = self.doc['scenario']['Algoritmo'][0]
         self.ns3_path = str(self.doc['scenario']['ns3_path'])
         self.ns3_path = os.getcwd() + '/' + self.ns3_path
         self.ns3_script = str(self.doc['scenario']['ns3_script'])
         self.nJobs = int(self.doc['scenario']['jobs'])
+        self.targetRealocation  = (self.doc['scenario']['targetRealocation'])[0]
         self.filename = str(self.doc['scenario']['filename'])
         self.configurations_file = configurations_file
        
@@ -45,48 +47,36 @@ class Simulation:
             if self.simLocation == 'cluster':
               print('To be implemented')
             else:
-              outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
               f.write('#!/bin/bash\n')
+              outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
+              f.write('rm -rf '+outputDir+' 2>/dev/null\n')
+              f.write('mkdir -p '+outputDir+'\n')
               f.write('cp -f run_'+sh_name+'.sh'+' '+outputDir+'\n')
               f.write('cp -f '+self.configurations_file+ ' ' +outputDir+'\n')
               f.write("cd '"+self.ns3_path+"'"+"\n")
-              f.write('rm -rf '+outputDir+' 2>/dev/null\n')
-              f.write('mkdir -p '+outputDir+'\n')
+                
             for iJob in range(0, self.nJobs):
                 jobRunSeed = random.randint(1, 23*10**14)
-                for iAlg in self.algoritmo:                           
+                #for iAlg in self.algoritmo:                           
+                for curLine in self.doc['scenario'][self.campaignLines]:                           
                     for varParam in self.doc['scenario'][curCampaign]:
-                      if str(curCampaign) == 'radius':
-                          command = (
-                          'NS_GLOBAL_VALUE="RngRun='+str(jobRunSeed)+ '" ' +
-                          "./waf --run '"+self.ns3_script+
-                          " --radius="+varParam+
-                          " --nDevices="+self.nDevices+
-                          " --simulationTime="+self.simulationTime+
-                          " --appPeriodSeconds="+self.appPeriodSeconds+
-                          " --print="+self.bPrint+
-                          " --fixedSeed="+str(self.fixedSeed)+
-                          " --algoritmo="+iAlg+
-                          " --filename="+ self.filename +
-                          " --outputDir='"+outputDir+"'"
-                          "'"
-                          )
-                      elif str(curCampaign) == 'nDevices':
-                          command = (
-                          'NS_GLOBAL_VALUE="RngRun='+str(jobRunSeed)+ '" ' +
-                          "./waf --run '"+self.ns3_script+ 
-                          " --radius="+self.radius+
-                          " --nDevices="+varParam+
-                          " --simulationTime="+self.simulationTime+
-                          " --appPeriodSeconds="+self.appPeriodSeconds+
-                          " --print="+self.bPrint+
-                          " --fixedSeed="+str(self.fixedSeed)+
-                          " --algoritmo="+iAlg+
-                          " --filename="+ self.filename +
-                          " --outputDir='"+outputDir+"'"
-                          "'"
-                          )
-                      f.write(command+' & wait\n')
+                        command = (
+                        'NS_GLOBAL_VALUE="RngRun='+str(jobRunSeed)+ '" ' +
+                        "./waf --run '"+self.ns3_script+
+                        " --radius="+self.radius+
+                        " --nDevices="+self.nDevices+
+                        " --simulationTime="+self.simulationTime+
+                        " --appPeriodSeconds="+self.appPeriodSeconds+
+                        " --print="+self.bPrint+
+                        " --fixedSeed="+str(self.fixedSeed)+
+                        " --algoritmo="+self.algoritmo+
+                        " --filename="+ self.filename +
+                        " --outputDir='"+outputDir+"'"
+                        " --"+self.campaignLines+"="+curLine+
+                        " --"+curCampaign+"="+varParam+
+                        "'"
+                        )
+                        f.write(command+' & wait\n')
                       
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--file", type=str, help='Configuration File')
@@ -98,13 +88,13 @@ with open(configurations_file, 'r') as f:
     campaign_name = os.path.splitext(configurations_file)[0]
 
 print('Simulação escolhida: ')
-campaign = doc['scenario']['campaign']
+campaign = doc['scenario']['campaignX']
 print(campaign)
                  
 simu = Simulation(configurations_file)
 
 for simC in campaign:
-    if str(simC) == 'nDevices' or str(simC) == 'radius':
+    if str(simC) == 'nDevices' or str(simC) == 'radius' or str(simC) == 'targetRealocation':
         simu.runCampaign(simC);
     else:
         print('Invalid simulation campaign: verify the campaign parameter!')

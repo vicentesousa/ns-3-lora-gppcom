@@ -445,9 +445,15 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
           mac->SetSf(x->GetInteger(7,12));
         }
         else if(algoritmo==7){
+        	// Perform sensitivity algorithm
+        	mac->SetSf(mac->GetSfFromDataRate(mac->GetDataRate()));
+        	// Perform realocation
         	if(i<(targetRealocation*endDevices.GetN()/100) && mac->GetSf() > 7 ){
         		mac->SetSf(mac->GetSf()-1);
         	}
+        }
+        else if(algoritmo==8){
+        	mac->SetSf(12);
         }else{
 
       }
