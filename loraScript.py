@@ -30,7 +30,7 @@ class Simulation:
         self.appPeriodSeconds = self.doc['scenario']['appPeriodSeconds']
         self.bPrint = (self.doc['scenario']['bPrint'])
         self.fixedSeed = (self.doc['scenario']['fixedSeed'])
-        self.algoritmo = self.doc['scenario']['Algoritmo'][0]
+        self.algoritmo = self.doc['scenario']['algoritmo'][0]
         self.ns3_path = str(self.doc['scenario']['ns3_path'])
         self.ns3_path = os.getcwd() + '/' + self.ns3_path
         self.ns3_script = str(self.doc['scenario']['ns3_script'])
@@ -48,7 +48,8 @@ class Simulation:
               print('To be implemented')
             else:
               f.write('#!/bin/bash\n')
-              outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
+              #outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
+              outputDir = self.ns3_path+'/results_'+self.filename+'_' + curCampaign
               f.write('rm -rf '+outputDir+' 2>/dev/null\n')
               f.write('mkdir -p '+outputDir+'\n')
               f.write('cp -f run_'+sh_name+'.sh'+' '+outputDir+'\n')

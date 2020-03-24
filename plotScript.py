@@ -1,4 +1,3 @@
-#%%file plotScriptRealoc.py
 # Legend
 #   RunSeed: 0
 #   Seed: 1
@@ -49,7 +48,7 @@ class openSimulation:
         self.appPeriodSeconds = self.doc['scenario']['appPeriodSeconds']
         self.bPrint = (self.doc['scenario']['bPrint'])
         self.fixedSeed = (self.doc['scenario']['fixedSeed'])
-        self.Algoritmo = self.doc['scenario']['Algoritmo']
+        self.Algoritmo = self.doc['scenario']['algoritmo']
         self.ns3_path = str(self.doc['scenario']['ns3_path'])
         self.ns3_path = os.getcwd() + '/' + self.ns3_path
         self.ns3_script = str(self.doc['scenario']['ns3_script'])
@@ -82,12 +81,13 @@ class openSimulation:
         
     def plotCampaign(self,curCampaign, metric):
         # some general configurations
-        outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign        
+        #outputDir = self.ns3_path+'/results_'+self.simLocation + '_' + curCampaign
+        outputDir = self.ns3_path+'/results_'+self.filename+'_' + curCampaign
         chFile = outputDir+ "/" + self.filename + '.txt'        
         print(chFile)
         simTime = np.loadtxt(chFile, skiprows=1, usecols=(6, ), delimiter=',', unpack=False)                
         resAlgoritmo = np.loadtxt(chFile, skiprows=1, usecols=(2, ), delimiter=',', unpack=False)
-        #restargetRealocation = np.loadtxt(chFile, skiprows=1, usecols=(14, ), delimiter=',', unpack=False)
+        restargetRealocation = np.loadtxt(chFile, skiprows=1, usecols=(14, ), delimiter=',', unpack=False)
         resradius = np.loadtxt(chFile, skiprows=1, usecols=(3, ), delimiter=',', unpack=False)
         resnDevices = np.loadtxt(chFile, skiprows=1, usecols=(4, ), delimiter=',', unpack=False)
         ressimDur = np.loadtxt(chFile, skiprows=1, usecols=(13, ), delimiter=',', unpack=False)
