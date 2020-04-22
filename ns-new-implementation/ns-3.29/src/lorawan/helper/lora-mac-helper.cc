@@ -362,11 +362,17 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
       // Get the ED sensitivity
       Ptr<EndDeviceLoraPhy> edPhy = loraNetDevice->GetPhy ()->GetObject<EndDeviceLoraPhy> ();
       const double *edSensitivity = edPhy->sensitivity;
-
+      // (I) Fixed at the lowest SF
       if(algoritmo==1){
         mac->SetSf(7);
 
-      }else if(algoritmo==2){
+      }
+      //(II)  Fixed  at  the  highest  SF
+      else if(algoritmo==2){
+    	  mac->SetSf(7);
+      }
+      // (III)  Equally  divided
+      else if(algoritmo==3){
         if(i<(1*endDevices.GetN())/6){
           mac->SetSf(7);
         }
@@ -385,11 +391,9 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
         else{
           mac->SetSf(12);
         }
-      
-
-
-
-      }else if(algoritmo==3){
+      }
+      // (IV) Arbitrarily divided - Capacity enhancement (a= {0.6,0.2,0.05,0.05,0.05,0.05})
+      else if(algoritmo==4){
         if(i<(6*endDevices.GetN())/10){
           mac->SetSf(7);
         }
@@ -407,17 +411,35 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
         }
         else{
           mac->SetSf(12);
-
         }
-
-
-
-      }else if(algoritmo==4){
+      }
+      // (V) Arbitrarily divided - Coverage enhancement (a={0.05,0.05,0.05,0.05,0.2,0.6})
+      else if(algoritmo==5){
+        if(i<(0.5*endDevices.GetN())/10){
+          mac->SetSf(7);
+        }
+        else if(i<(1.0*endDevices.GetN())/10){
+          mac->SetSf(8);
+        }
+        else if(i<(1.5*endDevices.GetN())/10){
+          mac->SetSf(9);
+        }
+        else if(i<(2.0*endDevices.GetN())/10){
+          mac->SetSf(10);
+        }
+        else if(i<(4.0*endDevices.GetN())/10){
+          mac->SetSf(11);
+        }
+        else{
+          mac->SetSf(12);
+        }
+      }
+      // (VI) Sensitivity based
+      else if(algoritmo==6){
         mac->SetSf(mac->GetSfFromDataRate(mac->GetDataRate()));
-
-
-      }else if(algoritmo==5){
-
+      }
+      // (VII) Sensitivity based arbitrarily divided - Capacity enhancement (a= {0.6,0.2,0.05,0.05,0.05,0.05})
+      else if(algoritmo==7){
         if(i<(6*endDevices.GetN())/10 && rxPowerAll[order[i]] > *edSensitivity ){
           mac->SetSf(7);
         }
@@ -435,29 +457,45 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
         }
         else{
           mac->SetSf(12);
-
         }
-      
-
-
-        }else if(algoritmo==6){ 
-          Ptr<UniformRandomVariable> x = CreateObject<UniformRandomVariable> ();
-          mac->SetSf(x->GetInteger(7,12));
-        }
-        else if(algoritmo==7){
-        	// Perform sensitivity algorithm
-        	mac->SetSf(mac->GetSfFromDataRate(mac->GetDataRate()));
-        	// Perform realocation
-        	if(i<(targetRealocation*endDevices.GetN()/100) && mac->GetSf() > 7 ){
-        		mac->SetSf(mac->GetSf()-1);
-        	}
-        }
-        else if(algoritmo==8){
-        	mac->SetSf(12);
-        }else{
-
       }
-
+      // (VIII) Sensitivity based arbitrarily divided - Coverage enhancement (a={0.05,0.05,0.05,0.05,0.2,0.6})
+      else if(algoritmo==8){
+        if(i<(0.5*endDevices.GetN())/10 && rxPowerAll[order[i]] > *edSensitivity ){
+          mac->SetSf(7);
+        }
+        else if(i<(1.0*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 1)){
+          mac->SetSf(8);
+        }
+        else if(i<(1.5*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 2)){
+          mac->SetSf(9);
+        }
+        else if(i<(2.0*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 3)){
+          mac->SetSf(10);
+        }
+        else if(i<(4.0*endDevices.GetN())/10  && rxPowerAll[order[i]] > *(edSensitivity + 4)){
+          mac->SetSf(11);
+        }
+        else{
+          mac->SetSf(12);
+        }
+      }
+      // (IX) Random assignment
+      else if(algoritmo==9){
+        Ptr<UniformRandomVariable> x = CreateObject<UniformRandomVariable> ();
+        mac->SetSf(x->GetInteger(7,12));
+      }
+      // (X) Sensitivity algorithm with reallocation
+      else if(algoritmo==10){
+    	// Perform sensitivity algorithm
+        mac->SetSf(mac->GetSfFromDataRate(mac->GetDataRate()));
+        // Perform realocation
+        if(i<(targetRealocation*endDevices.GetN()/100) && mac->GetSf() > 7 ){
+          mac->SetSf(mac->GetSf()-1);
+        }
+      }
+      else{
+      }
     }
     /*    if(i<(6*endDevices.GetN())/10){
       mac->SetSf(7);
