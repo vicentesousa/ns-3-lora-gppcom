@@ -369,7 +369,7 @@ void LoraMacHelper::SetSpreadingFactorsUp (NodeContainer endDevices, NodeContain
       }
       //(II)  Fixed  at  the  highest  SF
       else if(algoritmo==2){
-    	  mac->SetSf(7);
+    	  mac->SetSf(12);
       }
       // (III)  Equally  divided
       else if(algoritmo==3){
