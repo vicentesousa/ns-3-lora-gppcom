@@ -74,17 +74,17 @@ class openSimulation:
         elif algID == '3':
             return "Equal Split (III)"
         elif algID == '4':
-            return "Proposed for Capacity (IV)"
+            return "Capacity-enhanced (IV)"
         elif algID == '5':
-            return "Proposed for Coverage (V)"
+            return "Coverage-enhanced (V)"
         elif algID == '6':
             return "Sensitivity-based (VI)"
         elif algID == '7':
-            return "Proposed sensitivity-based for Capacity (VII)"
+            return "Sensitivity-based capacity-enhanced (VII)"
         elif algID == '8':
-            return "Proposed sensitivity-based for Coverage (VIII)"
+            return "Sensitivity-based coverage-enhanced (VIII)"
         elif algID == '9':
-            return "Random ADR (IX)"
+            return "Random (IX)"
         
     def doLabeltargetRealocation(self, realocRate):
         # Define labels for plots legends
@@ -134,14 +134,14 @@ class openSimulation:
                                 
                 if str(curCampaign) == 'radius':
                     #resalgIndexs = (resalg == int(iAlg)) & (resradius == int(varParam))
-                    chtitle = 'Settings ('+ self.doc['scenario']['nDevices'][0] +' devices)'
+                    chtitle = 'number of devices = ' + self.doc['scenario']['nDevices'][0] 
                     xlabel='Distance [m]'
                     #resxData = sorted(self.radius,key=int) 
                     # label = self.doLabel(iAlg)
                 elif str(curCampaign) == 'nDevices':
                 #    resalgIndexs = (resalg == int(iAlg)) & (resnDevices == int(varParam))                    
                     xlabel='Number of Devices'
-                    chtitle = 'Settings (radius = '+ self.doc['scenario']['radius'][0] +' m)'
+                    chtitle = 'radius = '+ self.doc['scenario']['radius'][0] +' m'
                 #    resxData = sorted(self.nDevices,key=int)
                 #    label = self.doLabel(iAlg)
                 elif str(curCampaign) == 'targetRealocation':

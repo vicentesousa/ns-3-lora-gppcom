@@ -29,7 +29,7 @@ import itertools
 
 # New plots
 #import matplotlib
-# Fix on matplotlib issue with backend
+#on matplotlib issue with backend
 #matplotlib.use('Agg')
 #import matplotlib.pyplot as plt
 plt.style.use('seaborn-white')
@@ -74,17 +74,17 @@ class openSimulation:
         elif algID == '3':
             return "Equal Split (III)"
         elif algID == '4':
-            return "Proposed for Capacity (IV)"
+            return "Capacity-enhanced (IV)"
         elif algID == '5':
-            return "Proposed for Coverage (V)"
+            return "Coverage-enhanced (V)"
         elif algID == '6':
             return "Sensitivity-based (VI)"
         elif algID == '7':
-            return "Proposed sensitivity-based for Capacity (VII)"
+            return "Sensitivity-based capacity-enhanced (VII)"
         elif algID == '8':
-            return "Proposed sensitivity-based for Coverage (VIII)"
+            return "Sensitivity-based coverage-enhanced (VIII)"
         elif algID == '9':
-            return "Random ADR (IX)"
+            return "Random (IX)"
         
     def doLabeltargetRealocation(self, realocRate):
         # Define labels for plots legends
@@ -136,14 +136,14 @@ class openSimulation:
                                     
                     if str(curCampaign) == 'radius':
                         #resalgIndexs = (resalg == int(iAlg)) & (resradius == int(varParam))
-                        chtitle = 'Settings ('+ self.doc['scenario']['nDevices'][0] +' devices)'
+                        chtitle = 'number of devices = '+ self.doc['scenario']['nDevices'][0]
                         xlabel='Distance [m]'
                         #resxData = sorted(self.radius,key=int) 
                         # label = self.doLabel(iAlg)
                     elif str(curCampaign) == 'nDevices':
                     #    resalgIndexs = (resalg == int(iAlg)) & (resnDevices == int(varParam))                    
                         xlabel='Number of Devices'
-                        chtitle = 'Settings (radius = '+ self.doc['scenario']['radius'][0] +' m)'
+                        chtitle = 'radius = '+ self.doc['scenario']['radius'][0] +' m'
                     #    resxData = sorted(self.nDevices,key=int)
                     #    label = self.doLabel(iAlg)
                     elif str(curCampaign) == 'targetRealocation':
@@ -205,7 +205,7 @@ class openSimulation:
             'ytick.labelsize':'x-large'}
             #plt.rcParams.update(params)        
             os.makedirs(outputDir+"/ps", exist_ok=True)
-            os.makedirs(outputDir+"/png", exist_ok=True)
+            os.makedirs(outputDir+"/png_twins", exist_ok=True)
                 
             if metric=='PDR':        
                 # Show and save PDR plot
@@ -237,10 +237,10 @@ class openSimulation:
         #ax.set_position([0.1, 0.1, box.width, box.height])
         #print(box)
         
-        plt.savefig(outputDir+"/png/"+imgfilename+".png",
-                    dpi=nPixels,
-                    bbox_extra_artists=(lgd,),
-                    bbox_inches='tight')
+        plt.savefig(outputDir+"/png_twins/"+imgfilename+".png",
+        dpi=nPixels,
+        bbox_extra_artists=(lgd,),
+        bbox_inches='tight')
                    
         #plt.savefig(outputDir+"/ps/"+imgfilename+".eps")
         #if bool(self.showPlot):
@@ -267,6 +267,6 @@ print(campaign)
 simu = openSimulation(configurations_file)
 for simC in campaign:
     if str(simC) == 'radius':
-        simu.plotCampaign(simC);
+        simu.plotCampaign(simC)
     else:
-        print('Invalid simulation campaign: verify the campaign parameter!')
+        print(' ')
